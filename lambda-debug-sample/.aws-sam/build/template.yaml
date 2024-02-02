@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: 'lambda-debug-sample
+
+  '
+Globals:
+  Function:
+    Timeout: 5
+Resources:
+  HelloGopher:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: HelloGopher
+      Handler: hello-world
+      Runtime: go1.x
+      Architectures:
+      - x86_64
+    Metadata:
+      SamResourceId: HelloGopher
